@@ -1,0 +1,117 @@
+@use "variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  width: 100%;
+}
+
+img {
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* weight */
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.typograph-display {
+  font-size: 7.2rem;
+  line-height: 120%;
+  color: #0a1931;
+}
+
+h1 {
+  line-height: 120%;
+  color: #0a1931;
+  font-size: 5.6rem;
+}
+
+h2 {
+  line-height: 120%;
+  color: #0a1931;
+  font-size: 4.8rem;
+}
+
+h3 {
+  line-height: 120%;
+  color: #0a1931;
+  font-size: 4rem;
+}
+
+h4 {
+  line-height: 120%;
+  color: #0a1931;
+  font-size: 3.6rem;
+}
+
+h5 {
+  line-height: 120%;
+  color: #0a1931;
+  font-size: 3.2rem;
+}
+
+p {
+  line-height: 150%;
+  color: variables.$green-gray-9;
+}
+
+.body-xxl {
+  font-size: 2.4rem;
+}
+
+.body-xl {
+  font-size: 2rem;
+}
+
+.body-large {
+  font-size: 1.8rem;
+}
+
+.body-medium {
+  font-size: 1.6rem;
+}
+
+.body-small {
+  font-size: 1.4rem;
+}
+
+.body-tiny {
+  font-size: 1.2rem;
+}

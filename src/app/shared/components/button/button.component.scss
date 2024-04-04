@@ -1,0 +1,63 @@
+@use "../../../../scss/variables.scss";
+
+button {
+  border-radius: 4.3rem;
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+  background-color: transparent;
+}
+
+/* size */
+
+.small {
+  padding: 1rem 2.4rem;
+  font-size: 1.2rem;
+  line-height: 130%;
+}
+
+.medium {
+  font-size: 1.4rem;
+  line-height: 120%;
+  padding: 1.4rem 3.2rem;
+}
+
+.large {
+  font-size: 1.4rem;
+  line-height: 120%;
+  padding: 1.6rem 4rem;
+}
+
+/* type */
+
+.fill {
+  color: variables.$white;
+  background-color: variables.$secondary-color;
+  transition: 0.5s ease;
+
+  &:hover {
+    background-color: variables.$third-color;
+  }
+}
+
+.border {
+  border: 2px solid variables.$secondary-color;
+  color: variables.$secondary-color;
+  transition: 0.5s ease;
+
+  &:hover {
+    border: 2px solid variables.$third-color;
+    color: variables.$third-color;
+  }
+}
+
+.ghost {
+  color: variables.$secondary-color;
+  background-color: rgba(86, 172, 89, 0.1);
+  transition: 0.5s ease;
+
+  &:hover {
+    background-color: rgba(86, 172, 89, 0.2);
+    color: variables.$third-color;
+  }
+}
