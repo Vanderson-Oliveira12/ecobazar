@@ -11,6 +11,9 @@ import { Component, Input, Output } from '@angular/core';
 export class ButtonComponent {
   @Input() size: 'small' | 'medium' | 'large' = 'small';
   @Input() type: 'fill' | 'border' | 'ghost' = 'fill';
+  @Input() value: string = "Content";
+
+  @Input() classList: string[] = [];
 
 
 }

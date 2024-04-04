@@ -1,0 +1,130 @@
+@use "variables";
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-infor {
+  height: 4.2rem;
+  padding: 1.2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e5e5;
+
+  .nav-infor-locale {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .nav-infor-lang {
+    display: flex;
+    align-items: center;
+  }
+
+  .lang-sign {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .langs-item-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding-right: 2rem;
+    border-right: 1px solid variables.$gray-1;
+  }
+
+
+  .lang-sign {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding-left: 2rem;
+
+      a {
+        cursor: pointer;
+      }
+
+      a:hover {
+        color: variables.$secondary-color;
+      }
+  }
+
+  .lang-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    cursor: pointer;
+  }
+}
+
+.nav-search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.4rem 0;
+
+    .search-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-search {
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      height: 4.5rem;
+      background-color: variables.$secondary-color;
+      padding: 0 2.4rem;
+      border-top-right-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+    }
+
+    .nav-search-input {
+      display: flex;
+      align-items: center;
+      gap: .8rem;
+      height: 4.5rem;
+      padding: 0 1.6rem;
+      border: 1px solid variables.$gray-2;
+      border-top-left-radius: 1rem;
+      border-bottom-left-radius: 1rem;
+      width: 40rem;
+
+        input {
+          background-color: transparent;
+          border: none;
+          width: 100%;
+          outline: none;
+          color: variables.$gray-5;
+        }
+
+        input::placeholder {
+          color: variables.$gray-5;
+          transition: .5s ease;
+        }
+
+        input:focus::placeholder {
+            opacity: 0;
+        }
+
+
+    }
+}
+
+.nav-search-products {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+}
