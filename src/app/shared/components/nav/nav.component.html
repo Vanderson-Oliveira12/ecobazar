@@ -8,11 +8,11 @@
       <div class="langs-item-container">
         <div class="lang-item">
           <p class="body-tiny fw-400 gray-6">US</p>
-          <img src="assets/icon/arrow-down.svg" alt="Seta">
+          <img src="assets/icon/arrow-down.svg" alt="Seta" />
         </div>
         <div class="lang-item">
           <p class="body-tiny fw-400 gray-6">BR</p>
-          <img src="assets/icon/arrow-down.svg" alt="Seta">
+          <img src="assets/icon/arrow-down.svg" alt="Seta" />
         </div>
       </div>
       <div class="lang-sign">
@@ -22,31 +22,61 @@
     </div>
   </div>
   <div class="nav-search">
-
     <a href="#">
-      <img src="assets/img/logo_black.svg" alt="Logo">
+      <img src="assets/img/logo_black.svg" alt="Logo" />
     </a>
     <div class="search-container">
       <div class="nav-search-input">
         <label for="search">
-          <img src="assets/icon/search.svg" alt="Pesquisar">
+          <img src="assets/icon/search.svg" alt="Pesquisar" />
         </label>
-        <input placeholder="Pesquisar..." autocomplete="off" type="text" name="Pesquisar..." id="search">
+        <input
+          placeholder="Pesquisar..."
+          autocomplete="off"
+          type="text"
+          name="Pesquisar..."
+          id="search"
+        />
       </div>
-      <button class="btn-search body-small fw-600">
-        Pesquisar
-      </button>
+      <button class="btn-search body-small fw-600">Pesquisar</button>
     </div>
     <div class="nav-search-products">
-      <a href="#">
-        <img src="assets/icon/heart.svg" alt="">
-      </a>
-      <a href="#">
-        <img src="assets/icon/bag.svg" alt="">
-      </a>
-      <div class="nav-search-products-price">
-        <p>PREço</p>
+      <div class="nav-search-cart">
+        <a href="#">
+          <img src="assets/icon/heart.svg" alt="" />
+        </a>
+        <div class="line"></div>
+        <a href="#">
+          <img src="assets/icon/bag.svg" alt="" />
+        </a>
       </div>
+
+      <div class="nav-search-products-price">
+        <p class="gray-7 body-tiny">Shopping cart:</p>
+        <p class="gray-9 body-small fw-500">R$ 57,00</p>
+      </div>
+    </div>
+  </div>
+  <div class="nav-menu">
+    <div class="nav-menu-list">
+      <div class="nav-menu-list-item" *ngFor="let item of items">
+        <div class="nav-menu-list-item-content" (mouseover)="handleOverMenuItem(item)" (mouseout)="handleOutMenuItem(item)">
+          <p class="{{item.isOver ? 'white' : 'gray-4'}} body-small">{{ item.title }}</p>
+          <img
+            src="assets/icon/arrow-down-{{item.isOver ? 'white' : 'gray'}}.svg"
+            alt="Seta"
+            *ngIf="item.isDropdown"
+          />
+        </div>
+        <ng-container *ngIf="item.isDropdown && item.isOver">
+          <div class="nav-menu-list-item-options"  *ngFor="let option of item.options">
+            <p class="body-small gray-4">{{option.title}}</p>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <div class="nav-menu-phone">
+      <p class="body-small white">(85) 99090-9090</p>
     </div>
   </div>
 </nav>
