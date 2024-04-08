@@ -186,3 +186,11 @@ nav {
   cursor: pointer;
   gap: 1rem;
 }
+
+.nav-align {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  @include mixins.align-container;
+}
