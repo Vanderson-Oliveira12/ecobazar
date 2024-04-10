@@ -1,0 +1,184 @@
+@use "mixins";
+@use "variables";
+
+.align {
+  @include mixins.align-container;
+}
+
+.header {
+  margin-top: 2.4rem;
+  margin-bottom: 6rem;
+}
+
+.header-offers {
+  display: grid;
+  grid-template-columns: 1fr 423px;
+  height: 600px;
+  gap: 2.4rem;
+
+  .header-offers-big {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.1)
+      ),
+      url("../../../assets/img/header-offer.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-right: 2.4rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2.8rem;
+    padding-left: 6rem;
+    position: relative;
+  }
+
+  .header-offers-big h2 {
+    max-width: 65rem;
+  }
+
+  .header-offers-big-descont {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding-left: 1.2rem;
+    border-left: 3px solid variables.$primary-color;
+
+    strong {
+      background-color: variables.$warning;
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+
+    p:last-child {
+      margin-top: 0.8rem;
+      color: #ccded2;
+    }
+  }
+}
+
+.btn-offers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 53px;
+  background-color: #fff;
+  color: variables.$secondary-color;
+  height: 5.1rem;
+  width: 19rem;
+  cursor: pointer;
+  border: none;
+  gap: 1.6rem;
+
+  img {
+    transition: 0.5s ease;
+  }
+
+  &:hover {
+    img {
+      transform: translateX(10px);
+    }
+  }
+}
+
+.header-offers-small {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+    .offers-item {
+      flex: 1;
+      border-radius: 1rem;
+      padding: 3.2rem;
+      background-image: url('../../../assets/img/header-offer-small.png');
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      strong {
+        text-transform: uppercase;
+      }
+    }
+
+    .offers-item-content {
+
+      h5 {
+        margin-top: .8rem;
+        margin-bottom: 1.2rem;
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        margin-top: 2.4rem;
+
+        p {
+          color: #00B207;
+        }
+
+        img {
+          transition: 0.5s ease;
+        }
+
+        &:hover {
+          img {
+            transform: translateX(5px);
+          }
+        }
+      }
+    }
+
+    .offers-item-second {
+      flex: 1;
+      border-radius: 1rem;
+      padding: 3.2rem;
+      background-image: url('../../../assets/img/header-offer-small-two.png');
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+
+      strong {
+        text-transform: uppercase;
+        margin-bottom: 1.2rem;
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        margin-top: 2.4rem;
+
+        p {
+          color: #00B207;
+        }
+
+        img {
+          transition: 0.5s ease;
+        }
+
+        &:hover {
+          img {
+            transform: translateX(5px);
+          }
+        }
+      }
+    }
+}
